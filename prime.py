@@ -2,7 +2,7 @@
 Python Development II
 Assignment 3 - Prime Factors
 John O.
-October 8, 2024
+October 9, 2024
 
 This program contains a function that generates the prime factors of the number entered. 
 
@@ -30,3 +30,9 @@ def generate_prime_factors(number):
     #  Raises a ValueError if 'number' is not an integer
     if not isinstance(number, int):
         raise ValueError(f'{number} is not an integer.')
+
+    prime_factors = []  # The list which contains the prime factors for the 'number' parameter
+
+    #  Returns an empty list if 'number' is less than 2, because in that case it cannot be a prime number
+    if number < 2:
+        return prime_factors
