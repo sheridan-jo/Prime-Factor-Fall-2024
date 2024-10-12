@@ -2,7 +2,7 @@
 Python Development II
 Assignment 3 - Prime Factors
 John O.
-October 9, 2024
+October 12, 2024
 
 This program contains a function that generates the prime factors of the number entered. 
 
@@ -36,3 +36,11 @@ def generate_prime_factors(number):
     #  Returns an empty list if 'number' is less than 2, because in that case it cannot be a prime number
     if number < 2:
         return prime_factors
+
+    #  Checks for divisibility by 2
+    #  Executes until 'number' is no longer divisible by 2
+    while number % 2 == 0:
+        prime_factors.append(2)  # Adds 2 to 'prime_factors' list while the loop condition is True
+        number //= 2  # Divides 'number' by 2 and assigns it a new value
+
+    return prime_factors  # List of prime factors for 'number' parameter is returned

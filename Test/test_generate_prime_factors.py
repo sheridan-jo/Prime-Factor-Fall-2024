@@ -3,7 +3,7 @@ Python Development II
 Assignment 3 - Prime Factors
 Test Suite for prime.py module
 John O.
-October 9, 2024
+October 12, 2024
 
 This test suite ensures that the function, generate_prime_factors() in the module, prime.py, works correctly. It
 verifies that the function can handle any integer entered, including numbers less than two. It also verifies that it
@@ -28,3 +28,7 @@ def test_non_integer():
 #  Verify that an empty list is returned when generate_prime_factors() is called with 1
 def test_number_is_1():
     assert prime.generate_prime_factors(1) == []
+
+# Verify that list [2] is returned when generate_prime_factors() is called with 2
+def test_number_is_2():
+    assert prime.generate_prime_factors(2) == [2]
