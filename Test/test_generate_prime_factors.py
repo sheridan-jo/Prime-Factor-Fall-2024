@@ -40,4 +40,3 @@ def test_number_is_3():
 # Verify that list [4] is returned when generate_prime_factors() is called with 4
 def test_number_is_4():
     assert prime.generate_prime_factors(4) == [2,2]
-    
