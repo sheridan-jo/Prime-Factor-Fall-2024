@@ -41,6 +41,12 @@ def generate_prime_factors(number):
     #  Executes until 'number' is no longer divisible by 2
     while number % 2 == 0:
         prime_factors.append(2)  # Adds 2 to 'prime_factors' list while the loop condition is True
-        number //= 2  # Divides 'number' by 2 and assigns it a new value
+        number //= 2  # Divides 'number' by 2 and assigns it a new
+
+    #  Checks for divisibility by 3
+    #  Executes until 'number' is no longer divisible by 3
+    while number % 3 == 0:
+        prime_factors.append(3)  # Adds 3 to 'prime_factors' list
+        number //= 3  #  Divides 'number' by 3 and assigns it a new value
 
     return prime_factors  # List of prime factors for 'number' parameter is returned
