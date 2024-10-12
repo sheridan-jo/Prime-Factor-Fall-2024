@@ -21,7 +21,7 @@ def generate_prime_factors(number):
         Generates a list of the prime factors for the number that the user inputs.
 
         Parameters:
-        number(int): The number for which prime factors are generated. It must be an integer greater than one.
+        number(int): The number for which prime factors are generated.
 
         Returns:
         list of int: A list of the prime numbers that multiply together to make 'number'.
@@ -33,7 +33,7 @@ def generate_prime_factors(number):
 
     prime_factors = []  # The list which contains the prime factors for the 'number' parameter
 
-    #  Returns an empty list if 'number' is less than 2, because in that case it cannot be a prime number
+    #  Returns an empty list if 'number' is less than 2
     if number < 2:
         return prime_factors
 
@@ -41,12 +41,20 @@ def generate_prime_factors(number):
     #  Executes until 'number' is no longer divisible by 2
     while number % 2 == 0:
         prime_factors.append(2)  # Adds 2 to 'prime_factors' list while the loop condition is True
-        number //= 2  # Divides 'number' by 2 and assigns it a new
+        number //= 2  # Divides 'number' by 2 and assigns it a new value
 
-    #  Checks for divisibility by 3
-    #  Executes until 'number' is no longer divisible by 3
-    while number % 3 == 0:
-        prime_factors.append(3)  # Adds 3 to 'prime_factors' list
-        number //= 3  #  Divides 'number' by 3 and assigns it a new value
+    #  Handling of numbers whose prime factors are larger than 2
+
+    odd_factor = 3  #  Used to check if 'number' is divisible by prime numbers larger than 2
+
+    #  Executes while 'odd_factor' is less than or equal to 'number' input
+    while odd_factor <= number:
+
+        #  Checks whether 'odd_factor' divides evenly into 'number' on each iteration
+        if number % odd_factor == 0:
+            prime_factors.append(odd_factor) #  Appends 'odd_factor' to list
+            number //= odd_factor  #  Divides 'number' by 'odd_factor' and assigns it a new value
+        else:
+            odd_factor += 2  #  Increments odd_factor by 2
 
     return prime_factors  # List of prime factors for 'number' parameter is returned

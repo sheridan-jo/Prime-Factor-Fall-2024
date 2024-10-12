@@ -52,3 +52,7 @@ def test_number_is_8():
 # Verify that list [3,3] is returned when generate_prime_factors() is called with 9
 def test_number_is_9():
     assert prime.generate_prime_factors(9) == [3,3]
+
+# Verify that list [2,5] is returned when generate_prime_factors() is called with 10
+def test_number_is_10():
+    assert prime.generate_prime_factors(10) == [2, 5]
