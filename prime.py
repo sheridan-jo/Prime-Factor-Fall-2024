@@ -47,7 +47,7 @@ def generate_prime_factors(number):
 
     odd_factor = 3  #  Used to check if 'number' is divisible by prime numbers larger than 2
 
-    #  Executes while 'odd_factor' is less than or equal to 'number' input
+    #  Executes while 'odd_factor' is less than or equal to 'number'
     while odd_factor <= number:
 
         #  Checks whether 'odd_factor' divides evenly into 'number' on each iteration
