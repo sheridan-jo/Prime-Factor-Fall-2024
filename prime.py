@@ -57,4 +57,8 @@ def generate_prime_factors(number):
         else:
             odd_factor += 2  #  Increments odd_factor by 2
 
+    #  If 'number' is still greater than 1 it is a prime factor and appended to the list
+    if number > 1:
+        prime_factors.append(number)
+
     return prime_factors  # List of prime factors for 'number' parameter is returned
