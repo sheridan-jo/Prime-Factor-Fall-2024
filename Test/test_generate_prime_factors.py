@@ -5,9 +5,11 @@ Test Suite for prime.py module
 John O.
 October 12, 2024
 
-This test suite ensures that the function, generate_prime_factors() in the module, prime.py, works correctly. It
-verifies that the function can handle any integer entered, including numbers less than two. It also verifies that it
-can handle errors resulting from non-integer input.
+This test suite ensures that the function, generate_prime_factors()
+in the module, prime.py, works correctly. It verifies that the
+function can handle any integer entered, including numbers less
+than two. It also verifies that it can handle errors resulting
+from non-integer input.
 
 Usage:
 Run this test module using pytest.
@@ -20,39 +22,41 @@ https://google.github.io/styleguide/pyguide.html
 import pytest
 import prime
 
-#  Verify that ValueError is raised when generate_prime_factors() is called with non-integer argument
 def test_non_integer():
+    """Test that a ValueError is raised when a non-integer is passed."""
     with pytest.raises(ValueError):
         prime.generate_prime_factors(3.14)
 
-#  Verify that an empty list is returned when generate_prime_factors() is called with 1
 def test_number_is_1():
+    """Test that an empty list is returned when 1 is passed."""
     assert prime.generate_prime_factors(1) == []
 
-# Verify that list [2] is returned when generate_prime_factors() is called with 2
+
 def test_number_is_2():
+    """Test that [2] is returned when 2 is passed."""
     assert prime.generate_prime_factors(2) == [2]
 
-# Verify that list [3] is returned when generate_prime_factors() is called with 3
+
 def test_number_is_3():
+    """Test that [3] is returned when 3 is passed."""
     assert prime.generate_prime_factors(3) == [3]
 
-# Verify that list [4] is returned when generate_prime_factors() is called with 4
 def test_number_is_4():
+    """Test that [2, 2] is returned when 4 is passed."""
     assert prime.generate_prime_factors(4) == [2,2]
 
-# Verify that list [2,3] is returned when generate_prime_factors() is called with 6
 def test_number_is_6():
+    """Test that [2, 3] is returned when 6 is passed."""
     assert prime.generate_prime_factors(6) == [2,3]
 
-# Verify that list [2,2,2] is returned when generate_prime_factors() is called with 8
 def test_number_is_8():
+    """Test that [2, 2, 2] is returned when 8 is passed."""
     assert prime.generate_prime_factors(8) == [2,2,2]
 
-# Verify that list [3,3] is returned when generate_prime_factors() is called with 9
 def test_number_is_9():
+    """Test that [3, 3] is returned when 9 is passed."""
     assert prime.generate_prime_factors(9) == [3,3]
 
-# Verify that list [2,5] is returned when generate_prime_factors() is called with 10
 def test_number_is_10():
+    """Test that [2, 5] is returned when 10 is passed."""
     assert prime.generate_prime_factors(10) == [2, 5]
