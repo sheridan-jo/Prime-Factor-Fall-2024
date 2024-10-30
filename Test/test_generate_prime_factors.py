@@ -14,6 +14,10 @@ from non-integer input.
 Usage:
 Run this test module using pytest.
 
+Imports:
+    pytest: Used to test prime.py
+    prime: The module containing the generate_prime_factors() function.
+
 Documented according to Google Style Docstrings
 https://google.github.io/styleguide/pyguide.html
 
